@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bj.product.dao.AttrAttrgroupRelationDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.bj.product.entity.AttrAttrgroupRelationEntity" id="attrAttrgroupRelationMap">
+        <result property="id" column="id"/>
+        <result property="attrId" column="attr_id"/>
+        <result property="attrGroupId" column="attr_group_id"/>
+        <result property="attrSort" column="attr_sort"/>
+    </resultMap>
+
+    <delete id="deleteBatch" >
+        DELETE FROM pms_attr_attrgroup_relation
+        <where>
+        <foreach collection="entityList" item="item" separator="or">
+            (attr_group_id=#{item.attrGroupId} AND attr_id=#{item.attrId})
+        </foreach>
+        </where>
+    </delete>
+
+    <select id="getAttrBycatalogId" resultType="com.bj.product.vo.BaseAttrsVo">
+        SELECT paa.*,pa.* FROM pms_attr_group paa
+        LEFT JOIN pms_attr_attrgroup_relation paar ON paa.attr_group_id=paar.`attr_group_id`
+        LEFT JOIN pms_attr pa ON paar.`attr_id`=pa.`attr_id`
+        <where>
+            <if test="catalogId != null and catalogId != ''">
+                and paa.catelog_id  = #{catalogId}
+            </if>
+        </where>
+    </select>
+
+     <resultMap id="attrGroupMap" type="com.bj.product.vo.SpuItemAttrGroup">
+         <result property="groupName" column="attr_group_name"></result>
+         <collection property="attrs" ofType="com.bj.product.vo.SpuBaseAttrVo">
+             <result property="attrName" column="attr_name"></result>
+             <result property="attrValue" column="attr_value"></result>
+         </collection>
+     </resultMap>
+    <select id="getAttrBySpuIdAndCatId" resultMap="attrGroupMap">
+        SELECT pg.`attr_group_id`,pg.`attr_group_name`,pa.`attr_id`,pa.`attr_name`,pv.`attr_value`
+        FROM pms_attr_group pg LEFT JOIN pms_attr_attrgroup_relation pr ON pg.`attr_group_id`=pr.`attr_group_id`
+        LEFT JOIN pms_attr pa ON pa.`attr_id`=pr.`attr_id`
+        LEFT JOIN pms_product_attr_value pv ON pv.`attr_id`=pa.`attr_id`
+        <where>
+            <if test="catalogId != null and catalogId != ''">
+                and pg.catelog_id = #{catalogId}
+            </if>
+
+            <if test="spuId != null and spuId != ''">
+            and pv.`spu_id` = #{spuId}
+        </if>
+        </where>
+    </select>
+
+</mapper>

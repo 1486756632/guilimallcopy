@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bj.product.dao.AttrDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.bj.product.entity.AttrEntity" id="attrMap">
+        <result property="attrId" column="attr_id"/>
+        <result property="attrName" column="attr_name"/>
+        <result property="searchType" column="search_type"/>
+        <result property="icon" column="icon"/>
+        <result property="valueSelect" column="value_select"/>
+        <result property="attrType" column="attr_type"/>
+        <result property="enable" column="enable"/>
+        <result property="catelogId" column="catelog_id"/>
+        <result property="showDesc" column="show_desc"/>
+    </resultMap>
+
+    <!-- 封装连表返回的数据 -->
+    <resultMap type="com.bj.product.vo.AttrRspVo" id="attrRspMap">
+        <result property="attrId" column="attr_id"/>
+        <result property="attrName" column="attr_name"/>
+        <result property="searchType" column="search_type"/>
+        <result property="icon" column="icon"/>
+        <result property="valueSelect" column="value_select"/>
+        <result property="valueType" column="value_type"/>
+        <result property="attrType" column="attr_type"/>
+        <result property="enable" column="enable"/>
+        <result property="catelogId" column="catelog_id"/>
+        <result property="showDesc" column="show_desc"/>
+        <result property="attrGroupId" column="attr_group_id"/>
+        <result property="attrGroupName" column="attr_group_name"/>
+        <result property="catName" column="name"/>
+    </resultMap>
+
+    <select id="getDatas" resultMap="attrRspMap">
+        SELECT attr.attr_id,attr.attr_name,attr.search_type,attr.icon,attr.value_type,attr.value_select,
+        attr.attr_type,attr.enable,attr.catelog_id,attr.show_desc,gro.`attr_group_name`,
+        gro.`attr_group_id`,cat.name FROM pms_attr attr LEFT JOIN pms_attr_attrgroup_relation rel
+        ON attr.`attr_id`=rel.`attr_id` LEFT JOIN pms_attr_group gro ON gro.`attr_group_id`=rel.`attr_group_id`
+        LEFT JOIN pms_category  cat ON attr.`catelog_id`=cat.`cat_id`
+        <where>
+            <if test="keys != null and keys != ''">
+               (attr.attr_name LIKE concat('%', #{keys},'%')
+               OR attr.value_select LIKE concat('%', #{keys},'%'))
+            </if>
+            <if test="catId != null and catId != ''">
+                and attr.catelog_id  = #{catId}
+            </if>
+            <if test="type != null and type != ''">
+                and attr.attr_type  = #{type}
+            </if>
+        </where>
+        limit #{page},#{limit}
+    </select>
+
+    <select id="getDatsTotal" resultType="Integer">
+        SELECT count(attr.`attr_id`) FROM pms_attr attr
+        <where>
+            <if test="keys != null and keys != ''">
+               (attr.attr_name LIKE concat('%', #{keys},'%')
+               OR attr.value_select LIKE concat('%', #{keys},'%'))
+            </if>
+            <if test="catId != null and catId != ''">
+                and attr.catelog_id  = #{catId}
+            </if>
+            <if test="type != null and type != ''">
+                and attr.attr_type  = #{type}
+            </if>
+        </where>
+    </select>
+
+</mapper>
