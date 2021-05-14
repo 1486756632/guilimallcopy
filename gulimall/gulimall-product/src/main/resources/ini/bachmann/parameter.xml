@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<node name="Parameter">
+	<node name="System">
+		<leaf>pRn_RatedPower</leaf>
+		<leaf>pRn_RatedGenRPM</leaf>
+		<leaf>pRn_PowerOptimizeRPM</leaf>
+		<leaf>pPi_NominalAngle</leaf>
+		<leaf>pRn_RatedTorque</leaf>
+		<leaf>pCv_RatedPowerFactor</leaf>
+
+		<node name="Config">
+			<leaf>pWi_IceDetectorEnable</leaf>
+			<leaf>pWi_IceUpResetTime</leaf>
+			<leaf>pTp_MVTranformEnable</leaf>
+			<leaf>pTp_MVSwitchOffEnable</leaf>
+			<leaf>pTp_MVSwitchOffTime</leaf>
+			<leaf>pSf_ObstacleLightEnable</leaf>
+			<leaf>pSf_TowerMonitorEnable</leaf>
+			<leaf>pSf_ShadowCastEnable</leaf>
+			<leaf>pGe_BrushwornEnable</leaf>
+			<leaf>pGe_WornFilterEnable</leaf>
+			<leaf>pTr_SignalSelectMode</leaf>
+		</node>
+	</node>
+	<node name="Monitor">
+		<node name="Start">
+			<leaf>pRn_StartWind</leaf>
+			<leaf>pRn_StartWindDelay</leaf>
+			<leaf>pRn_BrakeCoolDelay</leaf>
+			<leaf>pRn_RPMRamp1Rate</leaf>
+			<leaf>pRn_RPMRamp2Rate</leaf>
+			<leaf>pRn_RPMRamp1End</leaf>
+			<leaf>pRn_RPMRamp2End</leaf>
+			<leaf>pRn_TowerResonanceRPM</leaf>
+			<leaf>pRn_TowerResonanceRange</leaf>
+			<leaf>pRn_TowerResonanceSafeTime</leaf>
+			<leaf>pRn_TowerResonanceTime</leaf>
+			<leaf>pRn_CutInRPM</leaf>
+			<leaf>pRn_CutInRangeRPM</leaf>
+			<leaf>pRn_CutInTime</leaf>
+			<leaf>pRn_ParallelInTime</leaf>
+			<leaf>pRn_StartTime</leaf>
+			<leaf>pRn_MinStartAngle</leaf>
+			<leaf>pRn_MinStartRPM</leaf>
+			<leaf>pRn_StartPitchRate</leaf>
+			<leaf>pRn_StartTorqueRate</leaf>
+			<leaf>pRn_ChangeToOperationRPM</leaf>
+			<leaf>pRn_LowTempIdleEnable</leaf>
+			<leaf>pRn_LowTempIdleSetRpm</leaf>
+			<leaf>pRn_LowTempIdleStartWind</leaf>
+			<leaf>pRn_LowTempIdleMaxTime</leaf>
+			<leaf>pRn_LowWindIdleEnable</leaf>
+			<leaf>pRn_LowWindIdleSetRpm</leaf>
+			<leaf>pRn_LowWindIdleSetAngle</leaf>
+		</node>
+		<node name="Produce">
+			<leaf>pRn_LowPower</leaf>
+			<leaf>pRn_LowPowerTime</leaf>
+			<leaf>pRn_MinPower</leaf>
+			<leaf>pRn_MinPowerTime</leaf>
+			<leaf>pRn_MaxRunningRPM</leaf>
+			<leaf>pRn_HighPower</leaf>
+			<leaf>pRn_MaxPowerPeak</leaf>
+			<leaf>pRn_WindCutOutSpeed1s</leaf>
+			<leaf>pRn_WindCutOutSpeed30s</leaf>
+			<leaf>pRn_WindCutOutSpeed10m</leaf>
+			<leaf>pRn_WindDownSpeed</leaf>
+		</node>
+		<node name="Brake">
+			<leaf>pBk_NormalBrake1PitchAngle</leaf>
+			<leaf>pBk_BrakeSlowPitchAngle</leaf>
+			<leaf>pBk_BrakeSlowPitchRate</leaf>
+			<leaf>pBk_FastBrake1PitchRate</leaf>
+			<leaf>pBk_GenDisconnectRPM</leaf>
+			<leaf>pBk_BrakeTorqueReduceTime</leaf>
+			<leaf>pBk_B1B2Delay</leaf>
+			<leaf>pBk_NormalSurveillancePitchSpeed</leaf>
+			<leaf>pBk_FastSurveillancePitchSpeed</leaf>
+		</node>
+	</node>
+	<node name="Yaw">
+		<leaf>pYw_StartWindSpeed</leaf>
+		<leaf>pYw_NeedUntwistAngle</leaf>
+		<leaf>pYw_MustUntwistAngle</leaf>
+		<leaf>pYw_MaxTwistAngle</leaf>
+		<leaf>pYw_NacelleOffset</leaf>
+		<leaf>pYw_SetPoint1</leaf>
+		<leaf>pYw_SetPoint2</leaf>
+		<leaf>pYw_WindOffset1</leaf>
+		<leaf>pYw_WindOffset2</leaf>
+		<leaf>pYw_Delay1</leaf>
+		<leaf>pYw_Delay2</leaf>
+		<leaf>pYw_StopAngle</leaf>
+		<leaf>pYw_MaxWindOffset</leaf>
+		<leaf>pYw_CheckNacellePositionDelay</leaf>
+		<leaf>pYw_NacellePositionErrorDelay</leaf>
+	</node>
+	<node name="Pitch">
+		<leaf>pPi_SpinnerboxVersion</leaf>
+		<leaf>pRn_MaxOperationPitchAngle</leaf>
+		<leaf>pRn_MaxAnglePowerFactor</leaf>
+		<leaf>pPi_MotorMaxCurrent</leaf>
+		<leaf>pPi_MaxDisaccordCurrent</leaf>
+		<leaf>pPi_ArrivePositionRange</leaf>
+		<leaf>pPi_MaxPitchMeasureError</leaf>
+		<leaf>pPi_MaxSetActualAngleOffset</leaf>
+		<leaf>pPi_FastStopTestTime</leaf>
+		<leaf>pPi_BatteryTestTime</leaf>
+		<leaf>pPi_SleepTime</leaf>
+		<leaf>pPi_BatteryForcedChargingTime</leaf>
+		<leaf>pPi_BatteryTestStartTime</leaf>
+		<leaf>pPi_BatteryTestStopTime</leaf>
+		<node name="Temperature">
+			<leaf>pPi_Motor1TempEnable</leaf>
+			<leaf>pPi_Motor1TempSetHigh</leaf>
+			<leaf>pPi_Motor1TempResetHigh</leaf>
+			<leaf>pPi_Motor2TempEnable</leaf>
+			<leaf>pPi_Motor2TempSetHigh</leaf>
+			<leaf>pPi_Motor2TempResetHigh</leaf>
+			<leaf>pPi_Motor3TempEnable</leaf>
+			<leaf>pPi_Motor3TempSetHigh</leaf>
+			<leaf>pPi_Motor3TempResetHigh</leaf>
+			<leaf>pPi_HubTempEnable</leaf>
+			<leaf>pPi_HubTempSetHigh</leaf>
+			<leaf>pPi_HubTempResetHigh</leaf>
+		</node>
+	</node>
+
+	<node name="Controller">
+		<node name="Pitch">
+			<leaf>pRn_MinPitchAngle</leaf>
+			<leaf>pRn_MaxPitchAngle</leaf>
+			<leaf>pRn_MinPitchRate</leaf>
+			<leaf>pRn_MaxPitchRate</leaf>
+			<leaf>pRn_PitchPIDP</leaf>
+			<leaf>pRn_PitchPIDI</leaf>
+			<leaf>pRn_PitchPIDD</leaf>
+			<leaf>pRn_PitchPIDTS</leaf>
+
+			<node name="PGT">
+				<leaf>pRn_PGTAngle1</leaf>
+				<leaf>pRn_PGTGain1</leaf>
+				<leaf>pRn_PGTAngle2</leaf>
+				<leaf>pRn_PGTGain2</leaf>
+				<leaf>pRn_PGTAngle3</leaf>
+				<leaf>pRn_PGTGain3</leaf>
+				<leaf>pRn_PGTAngle4</leaf>
+				<leaf>pRn_PGTGain4</leaf>
+			</node>
+			<node name="PRT">
+				<leaf>pRn_PRTAngle1</leaf>
+				<leaf>pRn_PRTRate1</leaf>
+				<leaf>pRn_PRTAngle2</leaf>
+				<leaf>pRn_PRTRate2</leaf>
+				<leaf>pRn_PRTAngle3</leaf>
+				<leaf>pRn_PRTRate3</leaf>
+				<leaf>pRn_PRTAngle4</leaf>
+				<leaf>pRn_PRTRate4</leaf>
+				<leaf>pRn_PRTAngle5</leaf>
+				<leaf>pRn_PRTRate5</leaf>
+			</node>
+		</node>
+		<node name="Torque">
+			<leaf>pRn_RevolveSpeedPoint01</leaf>
+			<leaf>pRn_TorquePoint01</leaf>
+			<leaf>pRn_RevolveSpeedPoint02</leaf>
+			<leaf>pRn_TorquePoint02</leaf>
+			<leaf>pRn_RevolveSpeedPoint03</leaf>
+			<leaf>pRn_TorquePoint03</leaf>
+			<leaf>pRn_RevolveSpeedPoint04</leaf>
+			<leaf>pRn_TorquePoint04</leaf>
+			<leaf>pRn_RevolveSpeedPoint05</leaf>
+			<leaf>pRn_TorquePoint05</leaf>
+			<leaf>pRn_RevolveSpeedPoint06</leaf>
+			<leaf>pRn_TorquePoint06</leaf>
+			<leaf>pRn_RevolveSpeedPoint07</leaf>
+			<leaf>pRn_TorquePoint07</leaf>
+			<leaf>pRn_RevolveSpeedPoint08</leaf>
+			<leaf>pRn_TorquePoint08</leaf>
+			<leaf>pRn_RevolveSpeedPoint09</leaf>
+			<leaf>pRn_TorquePoint09</leaf>
+			<leaf>pRn_RevolveSpeedPoint10</leaf>
+			<leaf>pRn_TorquePoint10</leaf>
+			<leaf>pRn_RevolveSpeedPoint11</leaf>
+			<leaf>pRn_TorquePoint11</leaf>
+		</node>
+		<node name="Security">
+			<leaf>pRn_ADDPitchAngle</leaf>
+			<leaf>pRn_ADDRPM</leaf>
+			<leaf>pRn_ADDPitchRate</leaf>
+			<leaf>pRn_SafeWind</leaf>
+			<leaf>pRn_SafePitchAngle</leaf>
+			<leaf>pRn_SafeRPM</leaf>
+			<leaf>pRn_SafeTime</leaf>
+			<leaf>pRn_SafeRPMRate</leaf>
+		</node>
+		<node name="Para">
+			<leaf>pRn_DynamicKoptEnable</leaf>
+			<leaf>pRn_Kopt</leaf>
+			<leaf>pRn_MinGenSpeed</leaf>
+			<leaf>pRn_LowWindOfflineGenSpeed</leaf>
+			<leaf>pRn_Altitude</leaf>
+		</node>
+	</node>
+	<node name="Converter">
+		<leaf>pCv_ActualTorque4mA</leaf>
+		<leaf>pCv_ActualTorque20mA</leaf>
+		<leaf>pCv_TorqueDemand4mA</leaf>
+		<leaf>pCv_TorqueDemand20mA</leaf>
+		<leaf>pCv_GenRPM4mA</leaf>
+		<leaf>pCv_GenRPM20mA</leaf>
+		<leaf>pCv_PowerFactor4mA</leaf>
+		<leaf>pCv_PowerFactor20mA</leaf>
+		<leaf>pCv_PowerUpDelay</leaf>
+	</node>
+	<node name="Grid">
+		<leaf>pGr_VectorSurgeSelect</leaf>
+		<leaf>pGr_MaxVectorSurge</leaf>
+		<leaf>pGr_MaxPhaseAngleOffset</leaf>
+		<leaf>pGr_NominalVoltage</leaf>
+		<leaf>pGr_DropVoltagePercent</leaf>
+		<leaf>pGr_MaxVoltagePercent</leaf>
+		<leaf>pGr_MaxVoltageTime</leaf>
+		<leaf>pGr_MinVoltagePercent</leaf>
+		<leaf>pGr_MinVoltageTime</leaf>
+		<leaf>pGr_NominalFreq</leaf>
+		<leaf>pGr_ADDFreq</leaf>
+		<leaf>pGr_MaxFreqTime</leaf>
+		<leaf>pGr_SUBFreq</leaf>
+		<leaf>pGr_MinFreqTime</leaf>
+		<leaf>pGr_CurrentRatio</leaf>
+		<leaf>pGr_MaxAsymmetryCurrent</leaf>
+		<leaf>pGr_ResetTime</leaf>
+		<leaf>pGr_WindPowerTestWindSpeed</leaf>
+		<leaf>pGr_WindPowerTestPower</leaf>
+		<leaf>pGr_WindPowerTestPercent</leaf>
+		<leaf>pGr_MinFreq2Time</leaf>
+		<leaf>pGr_SubFreq2</leaf>
+		<leaf>pGr_LvrtEnable</leaf>
+		<leaf>pCv_LvrtSignalMode</leaf>
+		<leaf>pGr_LvrtLowVoltageTime</leaf>
+		<leaf>pGr_LvrtMaxTime</leaf>
+		<leaf>pGr_HvrtVolt1</leaf>
+		<leaf>pGr_HvrtTime1</leaf>
+		<leaf>pGr_HvrtVolt2</leaf>
+		<leaf>pGr_HvrtTime2</leaf>
+		<leaf>pGr_HvrtVolt3</leaf>
+		<leaf>pGr_HvrtTime3</leaf>
+		<leaf>pGr_HvrtVolt4</leaf>
+		<leaf>pGr_HvrtTime4</leaf>
+		<leaf>pGr_HvrtVolt5</leaf>
+		<leaf>pGr_HvrtTime5</leaf>
+		<leaf>pGr_HvrtCutOffVolt</leaf>
+		<leaf>pGr_HvrtCutOffTime</leaf>
+		<leaf>pGr_HvrtMinIntervel</leaf>
+		<leaf>pGr_HvrtVersion</leaf>
+		<leaf>pGr_HvrtTrigVolt</leaf>
+		<leaf>pGr_HvrtRecoverVolt</leaf>
+		<leaf>pGr_HvrtEnable</leaf>
+		<leaf>pCv_CommEnable</leaf>
+		<node name="Control">
+			<leaf>pCv_PowerFactorDemand</leaf>
+			<leaf>pCv_PowerFactorMode</leaf>
+			<leaf>pCv_PowerFactorType</leaf>
+			<leaf>pGr_CriticalVoltagePercent</leaf>
+			<leaf>pGr_CriticalRPM</leaf>
+			<leaf>pGr_CriticalFreq</leaf>
+		</node>
+	</node>
+
+	<node name="Revolution">
+		<leaf>pSp_GenRPMMode</leaf>
+		<leaf>pSp_GearRatio</leaf>
+		<leaf>pSp_RotorPulseSample</leaf>
+		<leaf>pSp_HighShaftPulseSample</leaf>
+		<leaf>pSp_HighShaft2PulseSample</leaf>
+		<leaf>pSp_GenPulseSample</leaf>
+		<leaf>pSp_MaxRotorRPM</leaf>
+		<leaf>pSp_MaxHighShaftRPM</leaf>
+		<leaf>pSp_MaxGenRPM</leaf>
+		<leaf>pSp_RotorLimitRPM</leaf>
+		<leaf>pSp_HighShaftLimitRPM</leaf>
+	</node>
+
+	<node name="Meteorological">
+		<leaf>pWi_Anemometer1Gain</leaf>
+		<leaf>pWi_Anemometer1Offset</leaf>
+		<leaf>pWi_Anemometer2Gain</leaf>
+		<leaf>pWi_Anemometer2Offset</leaf>
+		<leaf>pWi_WindVaneOffset</leaf>
+		<leaf>pTp_MeteorHeatEnable</leaf>
+		<leaf>pTp_MeteorHeatStart</leaf>
+		<leaf>pTp_MeteorHeatStop</leaf>
+		<leaf>pWi_WindVaneDifferenceLimit</leaf>
+		<leaf>pWi_UltraMeteorEnable</leaf>
+		<leaf>pWi_UltraAnemometer4mA</leaf>
+		<leaf>pWi_UltraAnemometer20mA</leaf>
+	</node>
+
+	<node name="Oil">
+		<node name="hydrolic">
+			<leaf>pHy_PressureEnable</leaf>
+			<leaf>pHy_PumpPressure4mA</leaf>
+			<leaf>pHy_PumpPressure20mA</leaf>
+			<leaf>pHy_MinPressure</leaf>
+			<leaf>pHy_MaxPressure</leaf>
+			<leaf>pHy_PressureTestTime</leaf>
+			<leaf>pHy_PumpEnable</leaf>
+			<leaf>pHy_StartPressure</leaf>
+			<leaf>pHy_StopPressure</leaf>
+			<leaf>pHy_MinRuntime</leaf>
+			<leaf>pHy_MaxRuntime</leaf>
+		</node>
+		<node name="Lubrication">
+			<leaf>pLb_PumpEnable</leaf>
+			<leaf>pLb_PumpRuntime</leaf>
+			<leaf>pLb_PumpInterval</leaf>
+		</node>
+		<node name="GearboxMonitor">
+			<leaf>pGb_PumpPressureEnable</leaf>
+			<leaf>pGb_PumpPressure4mA</leaf>
+			<leaf>pGb_PumpPressure20mA</leaf>
+			<leaf>pGb_InletPressureEnable</leaf>
+			<leaf>pGb_InletPressure4mA</leaf>
+			<leaf>pGb_InletPressure20mA</leaf>
+			<leaf>pGb_InletPressureLow</leaf>
+			<leaf>pGb_InletPressureLowTime</leaf>
+			<leaf>pGb_InletPressureLowTime2</leaf>
+			<leaf>pGb_InletPressureHigh</leaf>
+			<leaf>pGb_InletPressureHighTime</leaf>
+			<leaf>pGb_OilLevelControlEnable</leaf>
+			<leaf>pGb_OilLevelLowTime</leaf>
+		</node>
+		<node name="GearboxContol">
+			<leaf>pGb_PumpEnable</leaf>
+			<leaf>pGb_StartPumpRpm</leaf>
+			<leaf>pGb_PumpIntervalPeriod</leaf>
+			<leaf>pGb_PumpIntervalRunTime</leaf>
+			<leaf>pGb_PumpControlMode</leaf>
+			<leaf>pGb_StartPumpPressure</leaf>
+			<leaf>pGb_StopPumpPressure</leaf>
+			<leaf>pGb_StartPumpTemp</leaf>
+			<leaf>pGb_StopPumpTemp</leaf>
+			<leaf>pGb_Pump2Enable</leaf>
+			<leaf>pGb_StartPump2Temp</leaf>
+			<leaf>pGb_StopPump2Temp</leaf>
+		</node>
+	</node>
+
+	<node name="Temperature">
+		<node name="Controller">
+			<leaf>pTp_ControllerEnable</leaf>
+			<leaf>pTp_TopboxCoolStart</leaf>
+			<leaf>pTp_TopboxCoolStop</leaf>
+			<leaf>pTp_ControlSetHigh</leaf>
+			<leaf>pTp_ControlResetHigh</leaf>
+		</node>
+
+		<node name="Nacelle">
+			<leaf>pTp_NacelleEnable</leaf>
+			<leaf>pTp_NacelleOffset</leaf>
+			<leaf>pTp_NacelleCoolStart</leaf>
+			<leaf>pTp_NacelleCoolStop</leaf>
+			<leaf>pTp_NacelleSetHigh</leaf>
+			<leaf>pTp_NacelleResetHigh</leaf>
+			<leaf>pTp_NacelleStop</leaf>
+		</node>
+
+		<node name="Outside">
+			<leaf>pTp_OutsideEnable</leaf>
+			<leaf>pTp_OutsideOffset</leaf>
+			<leaf>pTp_OutsideSetHigh</leaf>
+			<leaf>pTp_OutsideResetHigh</leaf>
+			<leaf>pTp_OutsideSetLow</leaf>
+			<leaf>pTp_OutsideResetLow</leaf>
+		</node>
+
+		<node name="Rotor">
+			<leaf>pTp_RotorBearEnable</leaf>
+			<leaf>pTp_RotorBearOffset</leaf>
+			<leaf>pTp_RotorSetHigh</leaf>
+			<leaf>pTp_RotorResetHigh</leaf>
+			<leaf>pTp_RotorStop</leaf>
+		</node>
+
+		<node name="Converter">
+			<leaf>pTp_ConvInletEnable</leaf>
+			<leaf>pTp_ConvInletOffset</leaf>
+			<leaf>pTp_CvInletSetHigh</leaf>
+			<leaf>pTp_CvInletResetHigh</leaf>
+			<leaf>pTp_CvReducePowerEnable</leaf>
+			<leaf>pTp_CvReducePower</leaf>
+		</node>
+
+		<node name="GearboxBearing1">
+			<leaf>pTp_GearBear1Enable</leaf>
+			<leaf>pTp_GearBear1Offset</leaf>
+			<leaf>pTp_GearBear1SetHigh</leaf>
+			<leaf>pTp_GearBear1ResetHigh</leaf>
+			<leaf>pTp_GearBear1Stop</leaf>
+			<leaf>pTp_GearBear1CoolStart</leaf>
+			<leaf>pTp_GearBear1CoolStop</leaf>
+		</node>
+
+		<node name="GearboxBearing2">
+			<leaf>pTp_GearBear2Enable</leaf>
+			<leaf>pTp_GearBear2Offset</leaf>
+			<leaf>pTp_GearBear2SetHigh</leaf>
+			<leaf>pTp_GearBear2ResetHigh</leaf>
+			<leaf>pTp_GearBear2Stop</leaf>
+			<leaf>pTp_GearBear2CoolStart</leaf>
+			<leaf>pTp_GearBear2CoolStop</leaf>
+		</node>
+
+		<node name="GearOil">
+			<leaf>pTp_GearOilEnable</leaf>
+			<leaf>pTp_GearOilOffset</leaf>
+			<leaf>pTp_GearInletEnable</leaf>
+			<leaf>pTp_GearInletOffset</leaf>
+			<leaf>pTp_GearOilSetLow</leaf>
+			<leaf>pTp_GearOilResetLow</leaf>
+			<leaf>pTp_GearOilSetHigh</leaf>
+			<leaf>pTp_GearOilResetHigh</leaf>
+			<leaf>pTp_GearOilReducePower</leaf>
+			<leaf>pTp_GearRPMRate</leaf>
+		</node>
+
+		<node name="GearboxControl">
+			<leaf>pGb_FanEnable</leaf>
+			<leaf>pTp_GearOilCoolStart</leaf>
+			<leaf>pTp_GearOilCoolStop</leaf>
+			<leaf>pGb_HeatEnable</leaf>
+			<leaf>pTp_GearHeatStart</leaf>
+			<leaf>pTp_GearHeatStop</leaf>
+		</node>
+
+		<node name="GeneraterBearing1">
+			<leaf>pTp_GenStatorEnable</leaf>
+			<leaf>pTp_GenStatorOffset</leaf>
+			<leaf>pTp_GenBear1SetHigh</leaf>
+			<leaf>pTp_GenBear1ResetHigh</leaf>
+			<leaf>pTp_GenBear1Stop</leaf>
+		</node>
+
+		<node name="GeneraterBearing2">
+			<leaf>pTp_GenBear2Enable</leaf>
+			<leaf>pTp_GenBear2Offset</leaf>
+			<leaf>pTp_GenBear2SetHigh</leaf>
+			<leaf>pTp_GenBear2ResetHigh</leaf>
+			<leaf>pTp_GenBear2Stop</leaf>
+		</node>
+
+		<node name="GeneraterStator">
+			<leaf>pTp_GenBear1Enable</leaf>
+			<leaf>pTp_GenBear1Offset</leaf>
+			<leaf>pTp_GenStatorSetHigh</leaf>
+			<leaf>pTp_GenStatorResetHigh</leaf>
+			<leaf>pTp_GenStatorStop</leaf>
+			<leaf>pTp_GenStatorResetStop</leaf>
+			<leaf>pTp_GenStatorReducePower</leaf>
+			<leaf>pTp_GenRPMRate</leaf>
+		</node>
+
+		<node name="GeneraterControl">
+			<leaf>pGe_Fan1Enable</leaf>
+			<leaf>pTp_StatorCoolStart1</leaf>
+			<leaf>pTp_StatorCoolStop1</leaf>
+			<leaf>pGe_Fan2Enable</leaf>
+			<leaf>pTp_StatorCoolStart2</leaf>
+			<leaf>pTp_StatorCoolStop2</leaf>
+			<leaf>pGe_HeatEnable</leaf>
+			<leaf>pTp_GenHeatStart</leaf>
+			<leaf>pTp_GenHeatStop</leaf>
+		</node>
+	</node>
+
+	<node name="Viberation">
+		<leaf>pVb_GenXBandwidth</leaf>
+		<leaf>pVb_GenYBandwidth</leaf>
+		<leaf>pVb_GenXLevel1</leaf>
+		<leaf>pVb_GenYLevel1</leaf>
+		<leaf>pVb_GenXLevel2</leaf>
+		<leaf>pVb_GenYLevel2</leaf>
+		<leaf>pVb_GenXDelay1</leaf>
+		<leaf>pVb_GenYDelay1</leaf>
+		<leaf>pVb_GenXDelay2</leaf>
+		<leaf>pVb_GenYDelay2</leaf>
+		<leaf>pVb_GearXBandwidth</leaf>
+		<leaf>pVb_GearYBandwidth</leaf>
+		<leaf>pVb_GearXLevel1</leaf>
+		<leaf>pVb_GearYLevel1</leaf>
+		<leaf>pVb_GearXLevel2</leaf>
+		<leaf>pVb_GearYLevel2</leaf>
+		<leaf>pVb_GearXDelay1</leaf>
+		<leaf>pVb_GearYDelay1</leaf>
+		<leaf>pVb_GearXDelay2</leaf>
+		<leaf>pVb_GearYDelay2</leaf>
+		<leaf>pVb_GenXLevelHF</leaf>
+		<leaf>pVb_GenYLevelHF</leaf>
+		<leaf>pVb_GearXLevelHF</leaf>
+		<leaf>pVb_GearYLevelHF</leaf>
+	</node>
+</node>
