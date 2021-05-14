@@ -2,7 +2,9 @@ package com.bj.vip.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.bj.utils.HttpUtils;
+import com.atguigu.common.utils.HttpUtils;
+import com.atguigu.common.utils.PageUtils;
+import com.atguigu.common.utils.Query;
 import com.bj.vip.entity.MemberLevelEntity;
 import com.bj.vip.exception.PhoneExistException;
 import com.bj.vip.exception.UserNameExistException;
@@ -23,8 +25,6 @@ import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.bj.utils.PageUtils;
-import com.bj.utils.Query;
 
 import com.bj.vip.dao.MemberDao;
 import com.bj.vip.entity.MemberEntity;

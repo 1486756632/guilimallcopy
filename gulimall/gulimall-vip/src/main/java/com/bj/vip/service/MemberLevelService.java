@@ -1,8 +1,7 @@
 package com.bj.vip.service;
 
+import com.atguigu.common.utils.PageUtils;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.bj.utils.PageUtils;
-import com.bj.utils.R;
 import com.bj.vip.entity.MemberLevelEntity;
 
 import java.util.Map;

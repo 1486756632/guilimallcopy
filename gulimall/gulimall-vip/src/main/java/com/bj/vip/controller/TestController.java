@@ -1,6 +1,6 @@
 package com.bj.vip.controller;
 
-import com.bj.utils.R;
+import com.atguigu.common.utils.R;
 import com.bj.vip.feign.CouponService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

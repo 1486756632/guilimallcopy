@@ -1,10 +1,8 @@
-package com.bj.product.web;
+package com.atguigu.gulimall.product.web;
 
-import com.bj.product.entity.CategoryEntity;
-import com.bj.product.service.CategoryService;
-import com.bj.product.vo.Catelog2Vo;
-import org.redisson.api.RLock;
-import org.redisson.api.RedissonClient;
+import com.atguigu.gulimall.product.entity.CategoryEntity;
+import com.atguigu.gulimall.product.service.CategoryService;
+import com.atguigu.gulimall.product.vo.Catelog2Vo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 import java.util.Map;
+
 
 /**
  * @ClassName IndexController

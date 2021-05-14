@@ -5,13 +5,13 @@ import java.util.List;
 import java.util.Map;
 
 
+import com.atguigu.common.utils.PageUtils;
+import com.atguigu.common.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import com.bj.vip.entity.MemberReceiveAddressEntity;
 import com.bj.vip.service.MemberReceiveAddressService;
-import com.bj.utils.PageUtils;
-import com.bj.utils.R;
 
 
 

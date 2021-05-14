@@ -14,7 +14,7 @@ import java.util.List;
  * @Date 2020/11/3 16:48
  * @Version 1.0
  **/
-@FeignClient("storeTemplate.inventory")
+//@FeignClient("storeTemplate.inventory")
 public interface WareFeignService {
     @PostMapping("ware/waresku/hasStock")
     public R hasStockBySku(@RequestBody List<Long> skuIds);

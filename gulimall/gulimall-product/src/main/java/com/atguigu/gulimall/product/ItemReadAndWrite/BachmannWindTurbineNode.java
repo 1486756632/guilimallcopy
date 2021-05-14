@@ -10,7 +10,7 @@ import at.bachmann.vis.dacc.value.*;
 
 
 /**
- * ���ڵ������Ƶķ��������
+ * 用于单机控制的风机数据类
  *
  * @author Jeffrey
  * @version 1.0
@@ -37,7 +37,7 @@ public class BachmannWindTurbineNode {
     }
 
     /**
-     * �����糡���������Map<name, address>
+     * 搜索风场风机，返回Map<name, address>
      *
      * @return Map
      * @throws Exception
@@ -68,7 +68,7 @@ public class BachmannWindTurbineNode {
         DataSource datasource = project.getDataSource(dsName);
         Group group = null;
         group = datasource.createGroup("GroupAll",
-                                       "at.bachmann.vis.dacc.proxy.m1.VhdPollingChangesMode");
+                "at.bachmann.vis.dacc.proxy.m1.VhdPollingChangesMode");
         group.setParameter("POLLINGRATE", "1000");
         try {
             this.addItemsToGroup(group);
@@ -91,20 +91,20 @@ public class BachmannWindTurbineNode {
             infos1 = reader.getiInfos("ini/bachmann/items1.5.xml");
         } catch (Exception ex1) {
         }
-            for (ItemInfo info : infos1) {
-                 name=info.getName();
-                try {
-                    group.createItem(info.getName(), info.getAddress(),
-                                     DataType.getDataType(info.getDataType()),
-                                     1, info.getTypeLength(), info.getAuthority(), null);
-                } catch (ItemException ex2) {
-                } catch (InstantiationException ex2) {
-                }
+        for (ItemInfo info : infos1) {
+            name=info.getName();
+            try {
+                group.createItem(info.getName(), info.getAddress(),
+                        DataType.getDataType(info.getDataType()),
+                        1, info.getTypeLength(), info.getAuthority(), null);
+            } catch (ItemException ex2) {
+            } catch (InstantiationException ex2) {
             }
+        }
     }
 
     /**
-     * ���ӷ������������ˢ��
+     * 连接风机并激活数据刷新
      *
      * @throws AuthenticationException
      * @throws CommunicationException
@@ -118,7 +118,7 @@ public class BachmannWindTurbineNode {
     }
 
     /**
-     * ��ֹ����ˢ�²��Ͽ����
+     * 中止数据刷新并断开风机
      *
      * @throws CommunicationException
      * @throws IOException
@@ -131,7 +131,7 @@ public class BachmannWindTurbineNode {
     }
 
     /**
-     * ע��������ڳ����˳�ʱʹ��
+     * 注销风机，在程序退出时使用
      */
     public void destroy() {
         this.removeAllItemValueListeners();
@@ -164,7 +164,7 @@ public class BachmannWindTurbineNode {
     }
 
     /**
-     * ��ȡ�������
+     * 读取风机变量
      *
      * @param name String
      * @return String
@@ -188,7 +188,7 @@ public class BachmannWindTurbineNode {
     }
 
     /**
-     * ��ȡ�汾
+     * 获取版本
      *
      * @return float
      */
@@ -273,7 +273,7 @@ public class BachmannWindTurbineNode {
     }
 
     /**
-     * д��������
+     * 写入风机变量
      *
      * @param name String
      * @param value String
@@ -282,7 +282,7 @@ public class BachmannWindTurbineNode {
      */
     public void writeItem(String name, String value, String groupName) {
         Item item = this.project.getDataSource(dsName).getGroup("GroupAll").
-                    getItem(name);
+                getItem(name);
         if (item != null) {
             try {
                 item.write(WriteMode.TO_DEVICE, value);
@@ -292,14 +292,14 @@ public class BachmannWindTurbineNode {
             } catch (ItemException ex) {
                 ex.printStackTrace();
             } catch (CommunicationException ex) {
-                             ex.getStackTrace();
+                ex.getStackTrace();
             }
         } else {
         }
     }
 
     /**
-     * �������Դ�����ߣ���������������
+     * 添加数据源监听者，监听与风机的连接
      *
      * @param listener DataSourceListener
      */
@@ -314,7 +314,7 @@ public class BachmannWindTurbineNode {
     }
 
     /**
-     * ������ݼ�����
+     * 添加数据监听者
      *
      * @param listener ItemValueListener
      */

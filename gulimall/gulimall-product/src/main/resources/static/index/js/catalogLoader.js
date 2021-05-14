@@ -37,6 +37,7 @@ $(function(){
                 $(this).after(panel);
                 $(this).parent().addClass("header_li2");
                 console.log($(".header_main_left").html());
+                console.log("测试index输出")
             }
         });
     });

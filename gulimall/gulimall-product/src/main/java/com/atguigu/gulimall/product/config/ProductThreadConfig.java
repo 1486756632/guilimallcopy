@@ -1,4 +1,4 @@
-package com.bj.product.config;
+package com.atguigu.gulimall.product.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

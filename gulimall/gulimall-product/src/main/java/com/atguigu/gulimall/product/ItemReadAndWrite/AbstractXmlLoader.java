@@ -11,16 +11,16 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
 /**
- * �����ȡxml
- * 
+ * 抽象读取xml
+ *
  * @author jacob
  *
  * @param <T>
  */
 public abstract class AbstractXmlLoader<T> {
 	/**
-	 * ��ȡxml ʵ����󼯺�
-	 * 
+	 * 读取xml 实体对象集合
+	 *
 	 * @param file
 	 * @return
 	 * @throws DocumentException
@@ -39,25 +39,25 @@ public abstract class AbstractXmlLoader<T> {
 		}
 		return loads;
 	}
-	
+
 	/**
-	 * ������������
-	 * 
+	 * 创建单个对象
+	 *
 	 * @param element
 	 * @return
 	 */
 	protected abstract T create(Element element) throws IOException;
-	
+
 	/**
-	 * ��ȡ���ڵ�
-	 * 
+	 * 获取根节点
+	 *
 	 * @return
 	 */
 	protected abstract String getRootName();
-	
+
 	/**
-	 * ��ȡ����ʼ�ڵ�
-	 * 
+	 * 获取对象开始节点
+	 *
 	 * @return
 	 */
 	protected abstract String getSubName();

@@ -4,7 +4,8 @@ import java.util.Arrays;
 import java.util.Map;
 
 
-import com.bj.utils.R;
+import com.atguigu.common.utils.PageUtils;
+import com.atguigu.common.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.bj.vip.entity.GrowthChangeHistoryEntity;
 import com.bj.vip.service.GrowthChangeHistoryService;
-import com.bj.utils.PageUtils;
 
 
 

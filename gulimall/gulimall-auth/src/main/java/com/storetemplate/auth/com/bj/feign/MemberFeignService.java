@@ -1,7 +1,7 @@
 package com.storetemplate.auth.com.bj.feign;
 
-import com.bj.utils.R;
 
+import com.atguigu.common.utils.R;
 import com.storetemplate.auth.com.bj.vo.SocialUser;
 import com.storetemplate.auth.com.bj.vo.UserLoginVo;
 import com.storetemplate.auth.com.bj.vo.UserRegisterVo;

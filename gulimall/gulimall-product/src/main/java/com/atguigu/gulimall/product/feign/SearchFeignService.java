@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
-@FeignClient("storeTemplate.search")
+//@FeignClient("storeTemplate.search")
 public interface SearchFeignService {
     @PostMapping("/search/search/productUp/")
     public R productUp(@RequestBody List<SkuEsModel> skuEsModels);

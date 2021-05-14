@@ -2,6 +2,7 @@ package com.atguigu.gulimall.product.service;
 
 import com.atguigu.common.utils.R;
 import com.atguigu.gulimall.product.entity.SpuInfoDescEntity;
+import com.atguigu.gulimall.product.vo.SkuItemVo;
 import com.atguigu.gulimall.product.vo.SpuSaveVo;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.atguigu.common.utils.PageUtils;
@@ -26,7 +27,10 @@ public interface SpuInfoService extends IService<SpuInfoEntity> {
 
 
     PageUtils queryPageByCondition(Map<String, Object> params);
+
     R up(Long spuId);
+    void testInsert1();
+    void testInsert2();
 
 }
 

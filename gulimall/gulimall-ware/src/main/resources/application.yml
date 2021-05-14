@@ -5,13 +5,29 @@ spring:
   datasource:
     username: root
     password: root
-    url: jdbc:mysql://192.168.16.221:3306/gulimall_wms
+    url: jdbc:mysql://192.168.16.113:3306/gulimall_wms
     driver-class-name: com.mysql.jdbc.Driver
 
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.16.221:8848
+        server-addr: 192.168.16.113:8848
+
+#hystrix的超时时间
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+#ribbon的超时时间
+ribbon:
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
+
   application:
     name: gulimall-ware
 

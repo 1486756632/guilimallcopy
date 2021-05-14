@@ -2,60 +2,50 @@ package com.atguigu.gulimall.product.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-
-import java.math.BigDecimal;
-import java.io.Serializable;
-import java.util.Date;
 import lombok.Data;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * spu信息
  * 
- * @author leifengyang
- * @email leifengyang@gmail.com
- * @date 2019-10-01 21:08:49
+ * @author martin_yang
+ * @date 2021-3-31 21:08:49
  */
 @Data
-@TableName("pms_spu_info")
-public class SpuInfoEntity implements Serializable {
+@TableName("wnt_parameter")
+public class WntParameterEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 商品id
+	 * 一级目录id
 	 */
-	@TableId
-	private Long id;
+	private Integer firstNodeId;
 	/**
-	 * 商品名称
+	 * 一级目录名称
 	 */
-	private String spuName;
+	private String firstNode;
 	/**
 	 * 商品描述
 	 */
-	private String spuDescription;
+	private Integer secondNodeId;
 	/**
 	 * 所属分类id
 	 */
-	private Long catalogId;
+	private String secondNode;
 	/**
 	 * 品牌id
 	 */
-	private Long brandId;
+	private Integer thirdNodeId;
 	/**
 	 * 
 	 */
-	private BigDecimal weight;
+	private String thirdNode;
 	/**
-	 * 上架状态[0 - 新建，1 - 上架，2-下架]
+	 *
 	 */
-	private Integer publishStatus;
-	/**
-	 * 
-	 */
-	private Date createTime;
-	/**
-	 * 
-	 */
-	private Date updateTime;
+	private String parameterName;
 
 }

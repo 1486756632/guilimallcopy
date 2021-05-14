@@ -1,6 +1,6 @@
 package com.atguigu.gulimall.product.dao;
 
-import com.atguigu.gulimall.product.entity.SpuInfoDescEntity;
+import com.atguigu.gulimall.product.entity.WntIpEntity;
 import com.atguigu.gulimall.product.entity.WntParameterEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
@@ -13,6 +13,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @date 2019-10-01 21:08:49
  */
 @Mapper
-public interface WntParameterDao extends BaseMapper<WntParameterEntity> {
+public interface WntIpDao extends BaseMapper<WntIpEntity> {
 	
 }

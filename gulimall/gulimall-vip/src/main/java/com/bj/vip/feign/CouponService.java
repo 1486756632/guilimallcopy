@@ -1,6 +1,6 @@
 package com.bj.vip.feign;
 
-import com.bj.utils.R;
+import com.atguigu.common.utils.R;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 

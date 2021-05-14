@@ -2,10 +2,10 @@ package com.storetemplate.auth.com.bj.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.bj.constant.AuthServerConstant;
-import com.bj.exceptionCode.BASICTRANCODE;
-import com.bj.utils.R;
-import com.bj.vo.MemberRsepVo;
+import com.atguigu.common.constant.AuthServerConstant;
+import com.atguigu.common.exception.BASICTRANCODE;
+import com.atguigu.common.utils.R;
+import com.atguigu.common.vo.MemberRsepVo;
 import com.storetemplate.auth.com.bj.feign.MemberFeignService;
 import com.storetemplate.auth.com.bj.feign.OutgatewayFeignClint;
 import com.storetemplate.auth.com.bj.vo.UserLoginVo;
@@ -53,7 +53,7 @@ public class LoginController {
             String s1 = s.split("_")[1];
             long l = Long.parseLong(s1);
             if(System.currentTimeMillis()-l<60000){
-                return R.error(BASICTRANCODE.SMSEXCEPTION.getCode(),BASICTRANCODE.SMSEXCEPTION.getMsg());
+                return R.error(BASICTRANCODE.SMSEXCEPTION.getCode(), BASICTRANCODE.SMSEXCEPTION.getMsg());
             }
         }
         //生成验证码

@@ -1,9 +1,8 @@
-package com.bj.product.vo;
+package com.atguigu.gulimall.product.vo;
 
-import com.bj.product.entity.SkuImagesEntity;
-import com.bj.product.entity.SkuInfoEntity;
-import com.bj.product.entity.SpuInfoDescEntity;
-import com.bj.product.entity.SpuInfoEntity;
+import com.atguigu.gulimall.product.entity.SkuImagesEntity;
+import com.atguigu.gulimall.product.entity.SkuInfoEntity;
+import com.atguigu.gulimall.product.entity.SpuInfoDescEntity;
 import lombok.Data;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.test;
+package com.atguigu.gulimall.product.ItemReadAndWrite;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import org.dom4j.Element;
 
 
 /**
- * ¶ÁÈ¡xml ĞÎ³ÉList<ItemInfo>
+ * è¯»å–xml å½¢æˆList<ItemInfo>
  *
  *
  *

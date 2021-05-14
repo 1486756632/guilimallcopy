@@ -315,4 +315,22 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
         return r1;
     }
 
+    @Transactional
+    @Override
+    public void testInsert1(){
+        SpuInfoDescEntity spuInfoDescEntity=new SpuInfoDescEntity();
+        spuInfoDescEntity.setDecript("ceshiInsert1");
+        spuInfoDescService.save(spuInfoDescEntity);
+        System.out.println("testInsert1");
+    }
+
+    @Override
+    @Transactional
+    public void testInsert2(){
+        SkuInfoEntity skuInfoEntity=new SkuInfoEntity();
+        skuInfoEntity.setSkuDesc("ceshiInsert2");
+        skuInfoService.save(skuInfoEntity);
+        System.out.println("testInsert2");
+    }
+
 }

@@ -4,11 +4,10 @@ import com.alibaba.fastjson.JSON;
 
 
 import com.alibaba.fastjson.JSONObject;
-import com.bj.constant.AuthServerConstant;
-import com.bj.exceptionCode.BASICTRANCODE;
-import com.bj.utils.HttpUtils;
-import com.bj.utils.R;
-import com.bj.vo.MemberRsepVo;
+import com.atguigu.common.constant.AuthServerConstant;
+import com.atguigu.common.utils.HttpUtils;
+import com.atguigu.common.utils.R;
+import com.atguigu.common.vo.MemberRsepVo;
 import com.storetemplate.auth.com.bj.feign.MemberFeignService;
 import com.storetemplate.auth.com.bj.vo.SocialUser;
 import lombok.extern.slf4j.Slf4j;

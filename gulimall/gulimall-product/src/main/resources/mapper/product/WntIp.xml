@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.atguigu.gulimall.product.dao.WntParameterDao">
+<mapper namespace="com.atguigu.gulimall.product.dao.WntIpDao">
 
 	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.atguigu.gulimall.product.entity.WntParameterEntity" id="wntParameterMap">
-        <result property="firstNodeId" column="first_node_id"/>
-        <result property="firstNode" column="first_node"/>
-        <result property="secondNodeId" column="second_node_id"/>
-        <result property="secondNode" column="second_node"/>
-        <result property="thirdNodeId" column="third_node_id"/>
-        <result property="thirdNode" column="third_node"/>
-        <result property="parameterName" column="parameter_name"/>
+    <resultMap type="com.atguigu.gulimall.product.entity.WntIpEntity" id="wntIpMap">
+        <result property="id" column="id"/>
+        <result property="wntIp" column="wnt_ip"/>
+        <result property="wntName" column="wnt_name"/>
     </resultMap>
 
 

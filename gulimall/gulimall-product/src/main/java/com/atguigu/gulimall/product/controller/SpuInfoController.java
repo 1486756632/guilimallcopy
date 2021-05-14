@@ -97,5 +97,9 @@ public class SpuInfoController {
         spuInfoService.up(spuId);
         return R.ok();
     }
-
+    @RequestMapping("/testInsert")
+    public void testInsert(){
+        spuInfoService.testInsert1();
+        spuInfoService.testInsert2();
+    }
 }

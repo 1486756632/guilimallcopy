@@ -1,6 +1,7 @@
 package com.atguigu.gulimall.product.dao;
 
 import com.atguigu.gulimall.product.entity.AttrAttrgroupRelationEntity;
+import com.atguigu.gulimall.product.vo.SpuItemAttrGroup;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -18,5 +19,5 @@ import java.util.List;
 public interface AttrAttrgroupRelationDao extends BaseMapper<AttrAttrgroupRelationEntity> {
 
     void deleteBatchRelation(@Param("entities") List<AttrAttrgroupRelationEntity> entities);
-
+    List<SpuItemAttrGroup> getAttrBySpuIdAndCatId(@Param("spuId") Long spuId, @Param("catalogId") Long catalogId);
 }
