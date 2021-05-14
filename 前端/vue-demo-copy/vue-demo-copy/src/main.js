@@ -11,7 +11,9 @@ import httpRequest from '@/utils/httpRequest' // api: https://github.com/axios/a
 import { isAuth } from '@/utils'
 import cloneDeep from 'lodash/cloneDeep'
 import PubSub from 'pubsub-js'
+import elCascaderMulti from "el-cascader-multi";
 
+Vue.use(elCascaderMulti);
 Vue.use(VueCookie)
 Vue.config.productionTip = false
 

@@ -30,7 +30,7 @@
     <select id="getSaleAttrVosBySpuId" resultMap="saleAttr">
         SELECT sav.attr_id, sav.attr_name,
         sav.attr_value ,
-        GROUP_CONCAT( psi.sku_id) AS skuIds
+        GROUP_CONCAT( psi.sku_id) AS skuId
         FROM pms_sku_info psi
         LEFT JOIN pms_sku_sale_attr_value sav
         ON sav.sku_id=psi.sku_id

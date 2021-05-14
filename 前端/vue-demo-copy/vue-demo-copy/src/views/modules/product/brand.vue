@@ -230,6 +230,8 @@ export default {
         this.$refs.addOrUpdate.init(id);
       });
     },
+
+
     // 删除
     deleteHandle(id) {
       var ids = id
